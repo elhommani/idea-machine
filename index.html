@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video Idea Machine</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1d1f27, #2c2e3e);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .idea-box {
+      background: #333;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      min-height: 100px;
+      max-width: 600px;
+      text-align: center;
+      font-size: 1.25rem;
+      transition: all 0.3s ease;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      background-color: #00c897;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background-color: #00b387;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎥 Video Idea Machine</h1>
+  <div class="idea-box" id="ideaBox">Click the button to get a video idea!</div>
+  <button onclick="generateIdea()">Generate Video Idea</button>
+
+  <script>
+    const ideas = [
+      "🎮 Do a '1 HP Challenge' in your favorite game.",
+      "💡 'Reacting to My First Ever Video' – nostalgia content!",
+      "📹 24 Hours Only Speaking in Song Lyrics (IRL or Stream).",
+      "🎲 Let your viewers control your stream with a spinning challenge wheel.",
+      "📦 Buy the weirdest product on Amazon and review it.",
+      "🧠 Test viral TikTok hacks live – do they actually work?",
+      "🔥 100 viewers control my next move in a game!",
+      "👀 Hidden camera prank with a twist only your subscribers know.",
+      "🎤 Mic’d Up at the Gym / in Public – record reactions.",
+      "🎬 Re-create a famous movie scene but make it chaotic/funny."
+    ];
+
+    function generateIdea() {
+      const ideaBox = document.getElementById('ideaBox');
+      const randomIdea = ideas[Math.floor(Math.random() * ideas.length)];
+      ideaBox.textContent = randomIdea;
+    }
+  </script>
+</body>
+</html>
